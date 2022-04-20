@@ -1,0 +1,4176 @@
+{
+  "getPlpDataArgs": {
+    "maxSampleSize": 500000,
+    "washoutPeriod": 0
+  },
+  "skeletonType": "PatientLevelPredictionStudy",
+  "populationSettings": [{
+    "minTimeAtRisk": 364,
+    "requireTimeAtRisk": false,
+    "addExposureDaysToStart": false,
+    "riskWindowStart": 1,
+    "washoutPeriod": 365,
+    "attr_class": "populationSettings",
+    "addExposureDaysToEnd": false,
+    "includeAllOutcomes": true,
+    "priorOutcomeLookback": 99999,
+    "binary": true,
+    "removeSubjectsWithPriorOutcome": true,
+    "riskWindowEnd": 365,
+    "firstExposureOnly": true
+  }],
+  "organizationName": "Janssen Research and Development",
+  "targetIds": [8931],
+  "runPlpArgs": {
+    "nfold": 3,
+    "minCovariateFraction": 0.001,
+    "splitSeed": null,
+    "testSplit": "person",
+    "testFraction": 0.25,
+    "normalizeData": true
+  },
+  "description": null,
+  "version": "v2.7.0",
+  "outcomeIds": [
+    2820,
+    2551,
+    2837,
+    2839,
+    2836,
+    2835,
+    2834,
+    2832,
+    2831,
+    2829,
+    2828,
+    2824,
+    2826,
+    2823,
+    2822,
+    2821,
+    2559,
+    2556,
+    2557,
+    2830,
+    2833
+  ],
+  "skeletonVersion": "v0.0.1",
+  "createdDate": "1589289542321",
+  "conceptSetCrossReference": [],
+  "createdBy": null,
+  "cohortDefinitions": [
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "First"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "ConceptSets": [{
+          "expression": {"items": [
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 439235,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "276853009",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Self inflicted injury",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 4181216,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "363293009",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Self-administered poisoning",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 444362,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "86849004",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Suicidal deliberate poisoning",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 4273391,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "6471006",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Suicidal thoughts",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 440925,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "44301001",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Suicide",
+                "DOMAIN_ID": "Observation",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            }
+          ]},
+          "name": "Suicide and suicidal ideation",
+          "id": 0
+        }],
+        "cdmVersionRange": ">=5.0.0",
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [
+            {"ConditionOccurrence": {
+              "OccurrenceEndDate": null,
+              "CorrelatedCriteria": null,
+              "ConditionTypeExclude": false,
+              "CodesetId": 0,
+              "ProviderSpecialty": null,
+              "Gender": null,
+              "VisitType": null,
+              "First": true,
+              "OccurrenceStartDate": null,
+              "ConditionType": null,
+              "ConditionSourceConcept": null,
+              "StopReason": null,
+              "Age": null
+            }},
+            {"Observation": {
+              "ValueAsConcept": null,
+              "ObservationType": null,
+              "CorrelatedCriteria": null,
+              "ObservationTypeExclude": false,
+              "ValueAsString": null,
+              "CodesetId": 0,
+              "ProviderSpecialty": null,
+              "Gender": null,
+              "Unit": null,
+              "ObservationSourceConcept": null,
+              "VisitType": null,
+              "ValueAsNumber": null,
+              "Qualifier": null,
+              "First": true,
+              "OccurrenceStartDate": null,
+              "Age": null
+            }}
+          ],
+          "PrimaryCriteriaLimit": {"Type": "First"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "createdDate": "2016-08-22T09:19:33.637+0000",
+      "createdBy": null,
+      "name": "Suicide and suicidal ideation incident event",
+      "modifiedDate": null,
+      "description": "based on review from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3785233/",
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 2820
+    },
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "All"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "ConceptSets": [{
+          "expression": {"items": [
+            {
+              "isExcluded": true,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 432908,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "29538005",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Glaucomatocyclitic crisis",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 441561,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "50485007",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Low tension glaucoma",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": true,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 4216823,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "81416004",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Open angle with borderline findings",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 441284,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "84494001",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Open-angle glaucoma",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": true,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 4072218,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "21928008",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Secondary open-angle glaucoma",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            }
+          ]},
+          "name": "Open-angle glaucoma",
+          "id": 3
+        }],
+        "cdmVersionRange": ">=5.0.0",
+        "AdditionalCriteria": {
+          "CriteriaList": [{
+            "RestrictVisit": false,
+            "StartWindow": {
+              "UseEventEnd": null,
+              "Start": {
+                "Days": 1,
+                "Coeff": 1
+              },
+              "End": {
+                "Days": 365,
+                "Coeff": 1
+              },
+              "UseIndexEnd": null
+            },
+            "IgnoreObservationPeriod": false,
+            "EndWindow": null,
+            "Criteria": {"ConditionOccurrence": {
+              "OccurrenceEndDate": null,
+              "CorrelatedCriteria": null,
+              "ConditionTypeExclude": false,
+              "CodesetId": 3,
+              "ProviderSpecialty": [
+                {
+                  "INVALID_REASON_CAPTION": "Unknown",
+                  "CONCEPT_ID": 38004463,
+                  "STANDARD_CONCEPT": null,
+                  "CONCEPT_CODE": "18",
+                  "VOCABULARY_ID": "Specialty",
+                  "CONCEPT_NAME": "Ophthalmology",
+                  "DOMAIN_ID": "Provider Specialty",
+                  "STANDARD_CONCEPT_CAPTION": "Unknown",
+                  "CONCEPT_CLASS_ID": null,
+                  "INVALID_REASON": null
+                },
+                {
+                  "INVALID_REASON_CAPTION": "Unknown",
+                  "CONCEPT_ID": 38004481,
+                  "STANDARD_CONCEPT": null,
+                  "CONCEPT_CODE": "41",
+                  "VOCABULARY_ID": "Specialty",
+                  "CONCEPT_NAME": "Optometry",
+                  "DOMAIN_ID": "Provider Specialty",
+                  "STANDARD_CONCEPT_CAPTION": "Unknown",
+                  "CONCEPT_CLASS_ID": null,
+                  "INVALID_REASON": null
+                },
+                {
+                  "INVALID_REASON_CAPTION": "Unknown",
+                  "CONCEPT_ID": 38004701,
+                  "STANDARD_CONCEPT": null,
+                  "CONCEPT_CODE": "96",
+                  "VOCABULARY_ID": "Specialty",
+                  "CONCEPT_NAME": "Optician",
+                  "DOMAIN_ID": "Provider Specialty",
+                  "STANDARD_CONCEPT_CAPTION": "Unknown",
+                  "CONCEPT_CLASS_ID": null,
+                  "INVALID_REASON": null
+                }
+              ],
+              "Gender": null,
+              "VisitType": null,
+              "First": null,
+              "OccurrenceStartDate": null,
+              "ConditionType": null,
+              "ConditionSourceConcept": null,
+              "StopReason": null,
+              "Age": null
+            }},
+            "Occurrence": {
+              "Type": 2,
+              "IsDistinct": false,
+              "Count": 1
+            }
+          }],
+          "Type": "ALL",
+          "DemographicCriteriaList": [],
+          "Groups": [],
+          "Count": null
+        },
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"ConditionOccurrence": {
+            "OccurrenceEndDate": null,
+            "CorrelatedCriteria": null,
+            "ConditionTypeExclude": false,
+            "CodesetId": 3,
+            "ProviderSpecialty": null,
+            "Gender": null,
+            "VisitType": null,
+            "First": true,
+            "OccurrenceStartDate": null,
+            "ConditionType": null,
+            "ConditionSourceConcept": null,
+            "StopReason": null,
+            "Age": null
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "First"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 365
+          }
+        }
+      },
+      "createdDate": "2016-07-04T11:57:26.230+0000",
+      "createdBy": null,
+      "name": "Open angle glaucoma incident events",
+      "modifiedDate": "2016-07-04T12:17:56.533+0000",
+      "description": "definition based on : http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3836859/",
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 2551
+    },
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "First"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "ConceptSets": [
+          {
+            "expression": {"items": [
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 200763,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "76783007",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Chronic hepatitis",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 377604,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "72836002",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Hepatic coma",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 196029,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "40946000",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Hepatic coma due to viral hepatitis",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4337543,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "87248009",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Hepatic necrosis",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 194087,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "235862008",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Hepatitis due to infection",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 196455,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "51292008",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Hepatorenal syndrome",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 194990,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "128241005",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Inflammatory disease of liver",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4291005,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "3738000",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Viral hepatitis",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              }
+            ]},
+            "name": "acute liver injury",
+            "id": 0
+          },
+          {
+            "expression": {"items": [
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 192956,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "76581006",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Cholecystitis",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 200763,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "76783007",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Chronic hepatitis",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4212540,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "328383001",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Chronic liver disease",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 197917,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "105997008",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Disorder of biliary tract",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 192353,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "39621005",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Disorder of gallbladder",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 192963,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "3855007",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Disorder of pancreas",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 196456,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "235919008",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Gallstone",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4130518,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "126851005",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Neoplasm of liver",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4291005,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "3738000",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Viral hepatitis",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              }
+            ]},
+            "name": "acute liver injury exclusion concepts",
+            "id": 1
+          }
+        ],
+        "cdmVersionRange": ">=5.0.0",
+        "AdditionalCriteria": {
+          "CriteriaList": [{
+            "RestrictVisit": false,
+            "StartWindow": {
+              "UseEventEnd": null,
+              "Start": {
+                "Days": 365,
+                "Coeff": -1
+              },
+              "End": {
+                "Days": 60,
+                "Coeff": 1
+              },
+              "UseIndexEnd": null
+            },
+            "IgnoreObservationPeriod": false,
+            "EndWindow": null,
+            "Criteria": {"ConditionOccurrence": {
+              "OccurrenceEndDate": null,
+              "CorrelatedCriteria": null,
+              "ConditionTypeExclude": false,
+              "CodesetId": 1,
+              "ProviderSpecialty": null,
+              "Gender": null,
+              "VisitType": null,
+              "First": null,
+              "OccurrenceStartDate": null,
+              "ConditionType": null,
+              "ConditionSourceConcept": null,
+              "StopReason": null,
+              "Age": null
+            }},
+            "Occurrence": {
+              "Type": 0,
+              "IsDistinct": false,
+              "Count": 0
+            }
+          }],
+          "Type": "ALL",
+          "DemographicCriteriaList": [],
+          "Groups": [],
+          "Count": null
+        },
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"ConditionOccurrence": {
+            "OccurrenceEndDate": null,
+            "CorrelatedCriteria": null,
+            "ConditionTypeExclude": false,
+            "CodesetId": 0,
+            "ProviderSpecialty": null,
+            "Gender": null,
+            "VisitType": [
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 9203,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "ER",
+                "VOCABULARY_ID": "Visit",
+                "CONCEPT_NAME": "Emergency Room Visit",
+                "DOMAIN_ID": "Visit",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 9201,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "IP",
+                "VOCABULARY_ID": "Visit",
+                "CONCEPT_NAME": "Inpatient Visit",
+                "DOMAIN_ID": "Visit",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              }
+            ],
+            "First": true,
+            "OccurrenceStartDate": null,
+            "ConditionType": null,
+            "ConditionSourceConcept": null,
+            "StopReason": null,
+            "Age": null
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "First"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "createdDate": "2016-08-22T23:20:19.143+0000",
+      "createdBy": null,
+      "name": "Acute liver injury incident event",
+      "modifiedDate": "2016-08-22T23:59:43.427+0000",
+      "description": "codes based on:  http://onlinelibrary.wiley.com/doi/10.1002/pds.3824/full",
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 2837
+    },
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "First"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "ConceptSets": [{
+          "expression": {"items": [
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 321042,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "410429000",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Cardiac arrest",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 442289,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "53559009",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Death in less than 24 hours from onset of symptoms",
+                "DOMAIN_ID": "Observation",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 441139,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "50514002",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Instantaneous death",
+                "DOMAIN_ID": "Observation",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 4132309,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "26636000",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Sudden death",
+                "DOMAIN_ID": "Observation",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 4185572,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "44103008",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Ventricular arrhythmia",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 437894,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "71908006",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Ventricular fibrillation",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 4103295,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "25569003",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Ventricular tachycardia",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            }
+          ]},
+          "name": "Ventricular arrhythmia and sudden cardiac death",
+          "id": 0
+        }],
+        "cdmVersionRange": ">=5.0.0",
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"ConditionOccurrence": {
+            "OccurrenceEndDate": null,
+            "CorrelatedCriteria": null,
+            "ConditionTypeExclude": false,
+            "CodesetId": 0,
+            "ProviderSpecialty": null,
+            "Gender": null,
+            "VisitType": [
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 9203,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "ER",
+                "VOCABULARY_ID": "Visit",
+                "CONCEPT_NAME": "Emergency Room Visit",
+                "DOMAIN_ID": "Visit",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 9201,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "IP",
+                "VOCABULARY_ID": "Visit",
+                "CONCEPT_NAME": "Inpatient Visit",
+                "DOMAIN_ID": "Visit",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              }
+            ],
+            "First": true,
+            "OccurrenceStartDate": null,
+            "ConditionType": [
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 38000183,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Inpatient detail - primary",
+                "DOMAIN_ID": "Type Concept",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 38000199,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Inpatient header - primary",
+                "DOMAIN_ID": "Type Concept",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 44786627,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Primary Condition",
+                "DOMAIN_ID": "Type Concept",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 45756843,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Carrier claim detail - 1st position",
+                "DOMAIN_ID": "Type Concept",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 45756835,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Carrier claim header - 1st position",
+                "DOMAIN_ID": "Type Concept",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 38000184,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Inpatient detail - 1st position",
+                "DOMAIN_ID": "Type Concept",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 38000200,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Inpatient header - 1st position",
+                "DOMAIN_ID": "Type Concept",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 38000215,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Outpatient detail - 1st position",
+                "DOMAIN_ID": "Type Concept",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 38000230,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Outpatient header - 1st position",
+                "DOMAIN_ID": "Type Concept",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              }
+            ],
+            "ConditionSourceConcept": null,
+            "StopReason": null,
+            "Age": null
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "First"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "createdDate": "2016-08-23T00:14:12.227+0000",
+      "createdBy": null,
+      "name": "Ventricular arrhythmia and sudden cardiac death incident event",
+      "modifiedDate": "2016-08-23T00:22:41.190+0000",
+      "description": "as defined by : https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3217297/",
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 2839
+    },
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "First"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "ConceptSets": [{
+          "expression": {"items": [
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 4120275,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "234171009",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Drug-induced hypotension",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 317002,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "45007003",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Low blood pressure",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": true,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 314432,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "88887003",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Maternal hypotension syndrome",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 319041,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "28651003",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Orthostatic hypotension",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            }
+          ]},
+          "name": "Hypotension",
+          "id": 0
+        }],
+        "cdmVersionRange": ">=5.0.0",
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"ConditionOccurrence": {
+            "OccurrenceEndDate": null,
+            "CorrelatedCriteria": null,
+            "ConditionTypeExclude": false,
+            "CodesetId": 0,
+            "ProviderSpecialty": null,
+            "Gender": null,
+            "VisitType": null,
+            "First": true,
+            "OccurrenceStartDate": null,
+            "ConditionType": null,
+            "ConditionSourceConcept": null,
+            "StopReason": null,
+            "Age": null
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "First"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "createdDate": "2016-08-22T23:09:58.927+0000",
+      "createdBy": null,
+      "name": "Hypotension incident event",
+      "modifiedDate": "2016-08-22T23:17:44.397+0000",
+      "description": "as defined in: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4887133/",
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 2836
+    },
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "First"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "ConceptSets": [{
+          "expression": {"items": [
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 435093,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "25415003",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Closed fracture of femur",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 441974,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "91419009",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Closed fracture of forearm",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 4230399,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "359817006",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Closed fracture of hip",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 441422,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "43295006",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Closed fracture of humerus",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 439166,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "111640008",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Closed fracture of radius",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 4278672,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "65966004",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Fracture of forearm",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 442619,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "66308002",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Fracture of humerus",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 433856,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "5913000",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Fracture of neck of femur",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 4131595,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "12676007",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Fracture of radius",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 73571,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "268029009",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Pathological fracture",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            }
+          ]},
+          "name": "Fracture",
+          "id": 0
+        }],
+        "cdmVersionRange": ">=5.0.0",
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"ConditionOccurrence": {
+            "OccurrenceEndDate": null,
+            "CorrelatedCriteria": null,
+            "ConditionTypeExclude": false,
+            "CodesetId": 0,
+            "ProviderSpecialty": null,
+            "Gender": null,
+            "VisitType": null,
+            "First": true,
+            "OccurrenceStartDate": null,
+            "ConditionType": null,
+            "ConditionSourceConcept": null,
+            "StopReason": null,
+            "Age": null
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "First"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "createdDate": "2016-08-22T22:58:18.003+0000",
+      "createdBy": null,
+      "name": "Fracture incident event",
+      "modifiedDate": "2016-08-22T23:09:26.233+0000",
+      "description": "as defined by https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4380622/",
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 2835
+    },
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "First"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "ConceptSets": [{
+          "expression": {"items": [{
+            "isExcluded": false,
+            "concept": {
+              "INVALID_REASON_CAPTION": "Valid",
+              "CONCEPT_ID": 436246,
+              "STANDARD_CONCEPT": "S",
+              "CONCEPT_CODE": "8357008",
+              "VOCABULARY_ID": "SNOMED",
+              "CONCEPT_NAME": "Reduced libido",
+              "DOMAIN_ID": "Condition",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "CONCEPT_CLASS_ID": "Clinical Finding",
+              "INVALID_REASON": "V"
+            },
+            "includeMapped": false,
+            "includeDescendants": true
+          }]},
+          "name": "Decreased libido",
+          "id": 0
+        }],
+        "cdmVersionRange": ">=5.0.0",
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"ConditionOccurrence": {
+            "OccurrenceEndDate": null,
+            "CorrelatedCriteria": null,
+            "ConditionTypeExclude": false,
+            "CodesetId": 0,
+            "ProviderSpecialty": null,
+            "Gender": null,
+            "VisitType": null,
+            "First": true,
+            "OccurrenceStartDate": null,
+            "ConditionType": null,
+            "ConditionSourceConcept": null,
+            "StopReason": null,
+            "Age": null
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "First"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "createdDate": "2016-08-22T22:52:56.840+0000",
+      "createdBy": null,
+      "name": "Decreased libido incident event",
+      "modifiedDate": "2016-08-22T22:56:31.403+0000",
+      "description": null,
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 2834
+    },
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "First"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "ConceptSets": [{
+          "expression": {"items": [
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 78162,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "50438001",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Peripheral vertigo",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 439383,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "399153001",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Vertigo",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 381035,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "38403006",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Vertigo of central origin",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            }
+          ]},
+          "name": "Vertigo",
+          "id": 0
+        }],
+        "cdmVersionRange": ">=5.0.0",
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"ConditionOccurrence": {
+            "OccurrenceEndDate": null,
+            "CorrelatedCriteria": null,
+            "ConditionTypeExclude": false,
+            "CodesetId": 0,
+            "ProviderSpecialty": null,
+            "Gender": null,
+            "VisitType": null,
+            "First": true,
+            "OccurrenceStartDate": null,
+            "ConditionType": null,
+            "ConditionSourceConcept": null,
+            "StopReason": null,
+            "Age": null
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "First"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "createdDate": "2016-08-22T22:29:20.260+0000",
+      "createdBy": null,
+      "name": "Vertigo incident event",
+      "modifiedDate": "2016-08-22T22:37:51.383+0000",
+      "description": null,
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 2832
+    },
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "First"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "ConceptSets": [{
+          "expression": {"items": [{
+            "isExcluded": false,
+            "concept": {
+              "INVALID_REASON_CAPTION": "Valid",
+              "CONCEPT_ID": 377575,
+              "STANDARD_CONCEPT": "S",
+              "CONCEPT_CODE": "60862001",
+              "VOCABULARY_ID": "SNOMED",
+              "CONCEPT_NAME": "Tinnitus",
+              "DOMAIN_ID": "Condition",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "CONCEPT_CLASS_ID": "Clinical Finding",
+              "INVALID_REASON": "V"
+            },
+            "includeMapped": false,
+            "includeDescendants": true
+          }]},
+          "name": "Tinnitus",
+          "id": 0
+        }],
+        "cdmVersionRange": ">=5.0.0",
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"ConditionOccurrence": {
+            "OccurrenceEndDate": null,
+            "CorrelatedCriteria": null,
+            "ConditionTypeExclude": false,
+            "CodesetId": 0,
+            "ProviderSpecialty": null,
+            "Gender": null,
+            "VisitType": null,
+            "First": true,
+            "OccurrenceStartDate": null,
+            "ConditionType": null,
+            "ConditionSourceConcept": null,
+            "StopReason": null,
+            "Age": null
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "First"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "createdDate": "2016-08-22T22:23:59.530+0000",
+      "createdBy": null,
+      "name": "Tinnitus incident event",
+      "modifiedDate": "2016-08-22T22:29:59.310+0000",
+      "description": "definition based on: http://www.ncbi.nlm.nih.gov/pubmed/25573837",
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 2831
+    },
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "First"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "ConceptSets": [{
+          "expression": {"items": [
+            {
+              "isExcluded": true,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 377830,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "8635005",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Alcohol withdrawal delirium",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 373995,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "2776000",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Delirium",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            }
+          ]},
+          "name": "Delirium",
+          "id": 0
+        }],
+        "cdmVersionRange": ">=5.0.0",
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"ConditionOccurrence": {
+            "OccurrenceEndDate": null,
+            "CorrelatedCriteria": null,
+            "ConditionTypeExclude": false,
+            "CodesetId": 0,
+            "ProviderSpecialty": null,
+            "Gender": null,
+            "VisitType": [
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 9203,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "ER",
+                "VOCABULARY_ID": "Visit",
+                "CONCEPT_NAME": "Emergency Room Visit",
+                "DOMAIN_ID": "Visit",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 9201,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "IP",
+                "VOCABULARY_ID": "Visit",
+                "CONCEPT_NAME": "Inpatient Visit",
+                "DOMAIN_ID": "Visit",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              }
+            ],
+            "First": true,
+            "OccurrenceStartDate": null,
+            "ConditionType": null,
+            "ConditionSourceConcept": null,
+            "StopReason": null,
+            "Age": null
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "First"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "createdDate": "2016-08-22T22:02:05.810+0000",
+      "createdBy": null,
+      "name": "Delirium incident event",
+      "modifiedDate": "2016-08-22T22:14:09.047+0000",
+      "description": "using diagnosis codes in hospital, may be underreported per: http://www.ncbi.nlm.nih.gov/pubmed/27480944",
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 2829
+    },
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "First"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "ConceptSets": [{
+          "expression": {"items": [
+            {
+              "isExcluded": true,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 380533,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "87476004",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Convulsions in the newborn",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": true,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 45757050,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "100941000119100",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Epilepsy in mother complicating pregnancy",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 377091,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "91175000",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Seizure",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 4029498,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "128613002",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Seizure disorder",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            }
+          ]},
+          "name": "Seizure and seizure disorder",
+          "id": 0
+        }],
+        "cdmVersionRange": ">=5.0.0",
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"ConditionOccurrence": {
+            "OccurrenceEndDate": null,
+            "CorrelatedCriteria": null,
+            "ConditionTypeExclude": false,
+            "CodesetId": 0,
+            "ProviderSpecialty": null,
+            "Gender": null,
+            "VisitType": [
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 9203,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "ER",
+                "VOCABULARY_ID": "Visit",
+                "CONCEPT_NAME": "Emergency Room Visit",
+                "DOMAIN_ID": "Visit",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 9201,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "IP",
+                "VOCABULARY_ID": "Visit",
+                "CONCEPT_NAME": "Inpatient Visit",
+                "DOMAIN_ID": "Visit",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              }
+            ],
+            "First": true,
+            "OccurrenceStartDate": null,
+            "ConditionType": null,
+            "ConditionSourceConcept": null,
+            "StopReason": null,
+            "Age": null
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "First"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "createdDate": "2016-08-22T21:53:47.520+0000",
+      "createdBy": null,
+      "name": "Seizure incident event",
+      "modifiedDate": "2016-08-22T22:01:28.723+0000",
+      "description": "require IP/ER visit, per http://www.ncbi.nlm.nih.gov/pubmed/27249081",
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 2828
+    },
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "First"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "ConceptSets": [{
+          "expression": {"items": [{
+            "isExcluded": false,
+            "concept": {
+              "INVALID_REASON_CAPTION": "Valid",
+              "CONCEPT_ID": 140673,
+              "STANDARD_CONCEPT": "S",
+              "CONCEPT_CODE": "40930008",
+              "VOCABULARY_ID": "SNOMED",
+              "CONCEPT_NAME": "Hypothyroidism",
+              "DOMAIN_ID": "Condition",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "CONCEPT_CLASS_ID": "Clinical Finding",
+              "INVALID_REASON": "V"
+            },
+            "includeMapped": false,
+            "includeDescendants": true
+          }]},
+          "name": "Hypothyroidism",
+          "id": 0
+        }],
+        "cdmVersionRange": ">=5.0.0",
+        "AdditionalCriteria": {
+          "CriteriaList": [{
+            "RestrictVisit": false,
+            "StartWindow": {
+              "UseEventEnd": null,
+              "Start": {
+                "Days": 0,
+                "Coeff": -1
+              },
+              "End": {
+                "Days": 90,
+                "Coeff": 1
+              },
+              "UseIndexEnd": null
+            },
+            "IgnoreObservationPeriod": false,
+            "EndWindow": null,
+            "Criteria": {"ConditionOccurrence": {
+              "OccurrenceEndDate": null,
+              "CorrelatedCriteria": null,
+              "ConditionTypeExclude": false,
+              "CodesetId": 0,
+              "ProviderSpecialty": null,
+              "Gender": null,
+              "VisitType": null,
+              "First": null,
+              "OccurrenceStartDate": null,
+              "ConditionType": null,
+              "ConditionSourceConcept": null,
+              "StopReason": null,
+              "Age": null
+            }},
+            "Occurrence": {
+              "Type": 2,
+              "IsDistinct": false,
+              "Count": 2
+            }
+          }],
+          "Type": "ALL",
+          "DemographicCriteriaList": [],
+          "Groups": [],
+          "Count": null
+        },
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"ConditionOccurrence": {
+            "OccurrenceEndDate": null,
+            "CorrelatedCriteria": null,
+            "ConditionTypeExclude": false,
+            "CodesetId": 0,
+            "ProviderSpecialty": null,
+            "Gender": null,
+            "VisitType": null,
+            "First": null,
+            "OccurrenceStartDate": null,
+            "ConditionType": null,
+            "ConditionSourceConcept": null,
+            "StopReason": null,
+            "Age": null
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "All"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "createdDate": "2016-08-22T11:13:50.840+0000",
+      "createdBy": null,
+      "name": "Hypothyroidism incident event",
+      "modifiedDate": "2016-08-22T21:51:06.010+0000",
+      "description": "2 or more codes required, as described in: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4805275/",
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 2824
+    },
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "First"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "ConceptSets": [{
+          "expression": {"items": [{
+            "isExcluded": false,
+            "concept": {
+              "INVALID_REASON_CAPTION": "Valid",
+              "CONCEPT_ID": 75860,
+              "STANDARD_CONCEPT": "S",
+              "CONCEPT_CODE": "14760008",
+              "VOCABULARY_ID": "SNOMED",
+              "CONCEPT_NAME": "Constipation",
+              "DOMAIN_ID": "Condition",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "CONCEPT_CLASS_ID": "Clinical Finding",
+              "INVALID_REASON": "V"
+            },
+            "includeMapped": false,
+            "includeDescendants": true
+          }]},
+          "name": "Constipation",
+          "id": 0
+        }],
+        "cdmVersionRange": ">=5.0.0",
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"ConditionOccurrence": {
+            "OccurrenceEndDate": null,
+            "CorrelatedCriteria": null,
+            "ConditionTypeExclude": false,
+            "CodesetId": 0,
+            "ProviderSpecialty": null,
+            "Gender": null,
+            "VisitType": null,
+            "First": true,
+            "OccurrenceStartDate": null,
+            "ConditionType": null,
+            "ConditionSourceConcept": null,
+            "StopReason": null,
+            "Age": null
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "First"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "createdDate": "2016-08-22T11:54:48.473+0000",
+      "createdBy": null,
+      "name": "Constipation incident event",
+      "modifiedDate": "2016-08-22T12:06:10.603+0000",
+      "description": "requiring 2 or more diagnosis, per http://www.ncbi.nlm.nih.gov/pubmed/25215427",
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 2826
+    },
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "First"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "ConceptSets": [{
+          "expression": {"items": [
+            {
+              "isExcluded": true,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 30284,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "37031009",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Motion sickness",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 31967,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "422587007",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Nausea",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            }
+          ]},
+          "name": "Nausea",
+          "id": 0
+        }],
+        "cdmVersionRange": ">=5.0.0",
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"ConditionOccurrence": {
+            "OccurrenceEndDate": null,
+            "CorrelatedCriteria": null,
+            "ConditionTypeExclude": false,
+            "CodesetId": 0,
+            "ProviderSpecialty": null,
+            "Gender": null,
+            "VisitType": null,
+            "First": true,
+            "OccurrenceStartDate": null,
+            "ConditionType": null,
+            "ConditionSourceConcept": null,
+            "StopReason": null,
+            "Age": null
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "First"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "createdDate": "2016-08-22T11:07:23.283+0000",
+      "createdBy": null,
+      "name": "Nausea incident event",
+      "modifiedDate": "2016-08-22T11:12:07.200+0000",
+      "description": "definition as used in: http://www.ncbi.nlm.nih.gov/pubmed/26877616",
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 2823
+    },
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "First"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "ConceptSets": [{
+          "expression": {"items": [
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 196523,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "62315008",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Diarrhea",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 80141,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "47812002",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Functional diarrhea",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            }
+          ]},
+          "name": "Diarrhea",
+          "id": 0
+        }],
+        "cdmVersionRange": ">=5.0.0",
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"ConditionOccurrence": {
+            "OccurrenceEndDate": null,
+            "CorrelatedCriteria": null,
+            "ConditionTypeExclude": false,
+            "CodesetId": 0,
+            "ProviderSpecialty": null,
+            "Gender": null,
+            "VisitType": null,
+            "First": true,
+            "OccurrenceStartDate": null,
+            "ConditionType": null,
+            "ConditionSourceConcept": null,
+            "StopReason": null,
+            "Age": null
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "First"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "createdDate": "2016-08-22T10:57:47.213+0000",
+      "createdBy": null,
+      "name": "Diarrhea incident event",
+      "modifiedDate": "2016-08-22T11:02:08.017+0000",
+      "description": "definition as used in: http://www.ncbi.nlm.nih.gov/pubmed/26877616",
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 2822
+    },
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "First"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "ConceptSets": [{
+          "expression": {"items": [
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 439708,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "194437008",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Disorders of initiating and maintaining sleep",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 436962,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "193462001",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Insomnia",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 4305303,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "130989002",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Sleep deprivation",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            }
+          ]},
+          "name": "Insomnia",
+          "id": 0
+        }],
+        "cdmVersionRange": ">=5.0.0",
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"ConditionOccurrence": {
+            "OccurrenceEndDate": null,
+            "CorrelatedCriteria": null,
+            "ConditionTypeExclude": false,
+            "CodesetId": 0,
+            "ProviderSpecialty": null,
+            "Gender": null,
+            "VisitType": null,
+            "First": true,
+            "OccurrenceStartDate": null,
+            "ConditionType": null,
+            "ConditionSourceConcept": null,
+            "StopReason": null,
+            "Age": null
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "First"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "createdDate": "2016-08-22T10:08:26.337+0000",
+      "createdBy": null,
+      "name": "Insomnia incident event",
+      "modifiedDate": "2016-08-22T10:42:38.317+0000",
+      "description": null,
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 2821
+    },
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "First"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "ConceptSets": [{
+          "expression": {"items": [
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 374060,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "288723005",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Acute ill-defined cerebrovascular disease",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 4108356,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "195190007",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Cerebral infarction due to embolism of cerebral arteries",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 4110192,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "195189003",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Cerebral infarction due to thrombosis of cerebral arteries",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 4043731,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "230692004",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Infarction - precerebral",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            }
+          ]},
+          "name": "Ischemic stroke",
+          "id": 0
+        }],
+        "cdmVersionRange": ">=5.0.0",
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"ConditionOccurrence": {
+            "OccurrenceEndDate": null,
+            "CorrelatedCriteria": null,
+            "ConditionTypeExclude": false,
+            "CodesetId": 0,
+            "ProviderSpecialty": null,
+            "Gender": null,
+            "VisitType": [{
+              "INVALID_REASON_CAPTION": "Unknown",
+              "CONCEPT_ID": 9201,
+              "STANDARD_CONCEPT": null,
+              "CONCEPT_CODE": "IP",
+              "VOCABULARY_ID": "Visit",
+              "CONCEPT_NAME": "Inpatient Visit",
+              "DOMAIN_ID": "Visit",
+              "STANDARD_CONCEPT_CAPTION": "Unknown",
+              "CONCEPT_CLASS_ID": null,
+              "INVALID_REASON": null
+            }],
+            "First": true,
+            "OccurrenceStartDate": null,
+            "ConditionType": null,
+            "ConditionSourceConcept": null,
+            "StopReason": null,
+            "Age": null
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "First"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "createdDate": "2016-07-04T17:15:28.503+0000",
+      "createdBy": null,
+      "name": "Ischemic stroke - all inpatient,  incident event",
+      "modifiedDate": "2016-08-22T09:10:18.827+0000",
+      "description": "Ischemic stroke",
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 2559
+    },
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "First"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "ConceptSets": [{
+          "expression": {"items": [
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 4280942,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "66636001",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Acute gastrojejunal ulcer with perforation",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 28779,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "17709002",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Bleeding esophageal varices",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 198798,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "109558001",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Dieulafoy's vascular malformation",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 4112183,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "195475003",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Esophageal varices with bleeding, associated with another disorder",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 194382,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "23913003",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "External hemorrhoids",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": false
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 192671,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "74474003",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Gastrointestinal hemorrhage",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 196436,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "90458007",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Internal hemorrhoids",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": false
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 4338225,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "88169003",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Peptic ulcer with perforation",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": true,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 194158,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "48729005",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Perinatal gastrointestinal hemorrhage",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            }
+          ]},
+          "name": "Gastrointestinal hemorrhage",
+          "id": 0
+        }],
+        "cdmVersionRange": ">=5.0.0",
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"ConditionOccurrence": {
+            "OccurrenceEndDate": null,
+            "CorrelatedCriteria": null,
+            "ConditionTypeExclude": false,
+            "CodesetId": 0,
+            "ProviderSpecialty": null,
+            "Gender": null,
+            "VisitType": [
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 9203,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "ER",
+                "VOCABULARY_ID": "Visit",
+                "CONCEPT_NAME": "Emergency Room Visit",
+                "DOMAIN_ID": "Visit",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 9201,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "IP",
+                "VOCABULARY_ID": "Visit",
+                "CONCEPT_NAME": "Inpatient Visit",
+                "DOMAIN_ID": "Visit",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              }
+            ],
+            "First": true,
+            "OccurrenceStartDate": null,
+            "ConditionType": [
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 38000183,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Inpatient detail - primary",
+                "DOMAIN_ID": "Condition Type",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 38000199,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Inpatient header - primary",
+                "DOMAIN_ID": "Condition Type",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 44786627,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Primary Condition",
+                "DOMAIN_ID": "Condition Type",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 38000184,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Inpatient detail - 1st position",
+                "DOMAIN_ID": "Condition Type",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 38000200,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Inpatient header - 1st position",
+                "DOMAIN_ID": "Condition Type",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              }
+            ],
+            "ConditionSourceConcept": null,
+            "StopReason": null,
+            "Age": null
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "First"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "createdDate": "2016-07-04T17:08:28.477+0000",
+      "createdBy": null,
+      "name": "Gastrointestinal hemhorrage incident event",
+      "modifiedDate": "2016-08-22T09:01:35.287+0000",
+      "description": "GIH recorded during inpt/ER visit",
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 2556
+    },
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "First"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "ConceptSets": [{
+          "expression": {"items": [
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 4329847,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "22298006",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Myocardial infarction",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": true,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 314666,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "1755008",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Old myocardial infarction",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            }
+          ]},
+          "name": "Acute MI",
+          "id": 0
+        }],
+        "cdmVersionRange": ">=5.0.0",
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"ConditionOccurrence": {
+            "OccurrenceEndDate": null,
+            "CorrelatedCriteria": null,
+            "ConditionTypeExclude": false,
+            "CodesetId": 0,
+            "ProviderSpecialty": null,
+            "Gender": null,
+            "VisitType": [
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 9203,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "ER",
+                "VOCABULARY_ID": "Visit",
+                "CONCEPT_NAME": "Emergency Room Visit",
+                "DOMAIN_ID": "Visit",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 9201,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "IP",
+                "VOCABULARY_ID": "Visit",
+                "CONCEPT_NAME": "Inpatient Visit",
+                "DOMAIN_ID": "Visit",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              }
+            ],
+            "First": true,
+            "OccurrenceStartDate": null,
+            "ConditionType": [
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 38000183,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Inpatient detail - primary",
+                "DOMAIN_ID": "Condition Type",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 38000199,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Inpatient header - primary",
+                "DOMAIN_ID": "Condition Type",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 44786627,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Primary Condition",
+                "DOMAIN_ID": "Condition Type",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 38000184,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Inpatient detail - 1st position",
+                "DOMAIN_ID": "Condition Type",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 38000200,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Inpatient header - 1st position",
+                "DOMAIN_ID": "Condition Type",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              }
+            ],
+            "ConditionSourceConcept": null,
+            "StopReason": null,
+            "Age": null
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "First"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "createdDate": "2016-07-04T17:09:56.990+0000",
+      "createdBy": null,
+      "name": "Acute myocardial infarction incident event",
+      "modifiedDate": "2016-08-22T08:51:08.867+0000",
+      "description": "AMI recorded during inpt/ER vist, no events in prior 90d ",
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 2557
+    },
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "First"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "ConceptSets": [{
+          "expression": {"items": [
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 133280,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "56317004",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Alopecia",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": true,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 133959,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "59307008",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Syphilitic alopecia",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            }
+          ]},
+          "name": "Alopecia",
+          "id": 0
+        }],
+        "cdmVersionRange": ">=5.0.0",
+        "CensoringCriteria": [],
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"ConditionOccurrence": {
+            "OccurrenceEndDate": null,
+            "CorrelatedCriteria": null,
+            "ConditionTypeExclude": false,
+            "CodesetId": 0,
+            "ProviderSpecialty": null,
+            "Gender": null,
+            "VisitType": null,
+            "First": true,
+            "OccurrenceStartDate": null,
+            "ConditionType": null,
+            "ConditionSourceConcept": null,
+            "StopReason": null,
+            "Age": null
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "First"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "createdDate": "2016-08-22T22:18:08.017+0000",
+      "createdBy": null,
+      "name": "Alopecia incident event",
+      "modifiedDate": "2017-01-24T09:33:56.407+0000",
+      "description": "",
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 2830
+    },
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "First"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "ConceptSets": [
+          {
+            "expression": {"items": [{
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 435515,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "267447008",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Hypo-osmolality and or hyponatremia",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            }]},
+            "name": "Hyponatremia",
+            "id": 0
+          },
+          {
+            "expression": {"items": [
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 3032987,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "51419-0",
+                  "VOCABULARY_ID": "LOINC",
+                  "CONCEPT_NAME": "Sodium [Moles/volume] corrected for glucose in Serum or Plasma",
+                  "DOMAIN_ID": "Measurement",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Lab Test",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 46235784,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "77139-4",
+                  "VOCABULARY_ID": "LOINC",
+                  "CONCEPT_NAME": "Sodium [Moles/volume] in Serum, Plasma or Blood",
+                  "DOMAIN_ID": "Measurement",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Lab Test",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 3019550,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "2951-2",
+                  "VOCABULARY_ID": "LOINC",
+                  "CONCEPT_NAME": "Sodium serum/plasma",
+                  "DOMAIN_ID": "Measurement",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Lab Test",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              }
+            ]},
+            "name": "Serum sodium",
+            "id": 1
+          }
+        ],
+        "cdmVersionRange": ">=5.0.0",
+        "CensoringCriteria": [],
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [
+            {"ConditionOccurrence": {
+              "OccurrenceEndDate": null,
+              "CorrelatedCriteria": null,
+              "ConditionTypeExclude": false,
+              "CodesetId": 0,
+              "ProviderSpecialty": null,
+              "Gender": null,
+              "VisitType": null,
+              "First": true,
+              "OccurrenceStartDate": null,
+              "ConditionType": null,
+              "ConditionSourceConcept": null,
+              "StopReason": null,
+              "Age": null
+            }},
+            {"Measurement": {
+              "Operator": null,
+              "RangeHigh": null,
+              "MeasurementTypeExclude": false,
+              "ValueAsConcept": null,
+              "CorrelatedCriteria": null,
+              "RangeHighRatio": null,
+              "CodesetId": 1,
+              "ProviderSpecialty": null,
+              "Gender": null,
+              "Unit": [{
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 8753,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "mmol/L",
+                "VOCABULARY_ID": "UCUM",
+                "CONCEPT_NAME": "millimole per liter",
+                "DOMAIN_ID": "Unit",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              }],
+              "RangeLowRatio": null,
+              "MeasurementType": null,
+              "MeasurementSourceConcept": null,
+              "VisitType": null,
+              "ValueAsNumber": {
+                "Op": "bt",
+                "Extent": 136,
+                "Value": 1
+              },
+              "First": true,
+              "OccurrenceStartDate": null,
+              "RangeLow": null,
+              "Abnormal": null,
+              "Age": null
+            }}
+          ],
+          "PrimaryCriteriaLimit": {"Type": "First"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "createdDate": "2016-08-22T22:42:05.420+0000",
+      "createdBy": null,
+      "name": "Hyponatremia incident event",
+      "modifiedDate": "2017-10-05T08:47:03.447+0000",
+      "description": "Diagnosis codes previously shown to not be sensitive:  http://www.ncbi.nlm.nih.gov/pubmed/18564417",
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 2833
+    },
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "All"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "CensorWindow": {
+          "StartDate": null,
+          "EndDate": null
+        },
+        "ConceptSets": [
+          {
+            "expression": {"items": [
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 44507700,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "1455099",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "vortioxetine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 19041910,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "38252",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "tianeptine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 19084693,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "60842",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "reboxetine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 19010652,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "30121",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "Moclobemide",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 43560354,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "1433212",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "levomilnacipran",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 21604686,
+                  "STANDARD_CONCEPT": "C",
+                  "CONCEPT_CODE": "N06A",
+                  "VOCABULARY_ID": "ATC",
+                  "CONCEPT_NAME": "ANTIDEPRESSANTS",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Classification",
+                  "CONCEPT_CLASS_ID": "ATC 3rd",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 21500526,
+                  "STANDARD_CONCEPT": "C",
+                  "CONCEPT_CODE": "00000526",
+                  "VOCABULARY_ID": "ETC",
+                  "CONCEPT_NAME": "Antidepressants",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Classification",
+                  "CONCEPT_CLASS_ID": "ETC",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              }
+            ]},
+            "name": "antidepressant",
+            "id": 1
+          },
+          {
+            "expression": {"items": [
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 374623,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "73097000",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Alcohol amnestic disorder",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 439147,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "48167000",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Amnesia",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 372608,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "3298001",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Amnestic disorder",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 380089,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "420146005",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Cerebral degeneration associated with generalized lipidosis",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 379006,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "2584003",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Cerebral degeneration in childhood",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 374906,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "16517004",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Cerebral lipidosis",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 440700,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "271569006",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Communicating hydrocephalus",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 375239,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "52522001",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Degenerative brain disorder",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 36903604,
+                  "STANDARD_CONCEPT": "C",
+                  "CONCEPT_CODE": "10012289",
+                  "VOCABULARY_ID": "MedDRA",
+                  "CONCEPT_NAME": "Dementia NEC",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Classification",
+                  "CONCEPT_CLASS_ID": "HLT",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 374341,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "58756001",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Huntington's chorea",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 432899,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "30753002",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Normal pressure hydrocephalus",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 440385,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "230746009",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Obstructive hydrocephalus",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 374009,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "111479008",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Organic mental disorder",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 380375,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "36217008",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Organic personality disorder",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4333667,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "231438001",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Presbyophrenic psychosis",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 373179,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "45864009",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Senile degeneration of brain",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              }
+            ]},
+            "name": "Dementia",
+            "id": 7
+          },
+          {
+            "expression": {"items": [
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 432590,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "48500005",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Delusional disorder",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 434900,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "191483003",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Drug-induced psychosis",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 375229,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "5510009",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Organic delusional disorder",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4333667,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "231438001",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Presbyophrenic psychosis",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 436073,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "69322001",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Psychotic disorder",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 441540,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "191678001",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Reactive confusion",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 435783,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "58214004",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Schizophrenia",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 380986,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "371024007",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Senile dementia with delusion",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              }
+            ]},
+            "name": "Psychosis",
+            "id": 8
+          },
+          {
+            "expression": {"items": [
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 436665,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "13746004",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Bipolar disorder",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4333677,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "231494001",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Mania",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 437249,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "191590005",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Recurrent manic episodes",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              }
+            ]},
+            "name": "Mania",
+            "id": 9
+          },
+          {
+            "expression": {"items": [{
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 4152280,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "370143000",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Major depressive disorder",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            }]},
+            "name": "Major depressive disorder",
+            "id": 11
+          }
+        ],
+        "EndStrategy": {"DateOffset": {
+          "DateField": "StartDate",
+          "Offset": 0
+        }},
+        "cdmVersionRange": ">=5.0.0",
+        "CensoringCriteria": [],
+        "AdditionalCriteria": {
+          "CriteriaList": [
+            {
+              "RestrictVisit": false,
+              "StartWindow": {
+                "UseEventEnd": false,
+                "Start": {
+                  "Days": 30,
+                  "Coeff": -1
+                },
+                "End": {
+                  "Days": 30,
+                  "Coeff": 1
+                },
+                "UseIndexEnd": null
+              },
+              "IgnoreObservationPeriod": false,
+              "EndWindow": null,
+              "Criteria": {"DrugExposure": {
+                "OccurrenceEndDate": null,
+                "CorrelatedCriteria": null,
+                "DrugSourceConcept": null,
+                "CodesetId": 1,
+                "DrugTypeExclude": false,
+                "Quantity": null,
+                "DrugType": null,
+                "ProviderSpecialty": null,
+                "EffectiveDrugDose": null,
+                "Gender": null,
+                "DaysSupply": null,
+                "DoseUnit": null,
+                "VisitType": null,
+                "Refills": null,
+                "First": null,
+                "OccurrenceStartDate": null,
+                "RouteConcept": null,
+                "StopReason": null,
+                "LotNumber": null,
+                "Age": null
+              }},
+              "Occurrence": {
+                "Type": 2,
+                "IsDistinct": false,
+                "Count": 1
+              }
+            },
+            {
+              "RestrictVisit": false,
+              "StartWindow": {
+                "UseEventEnd": false,
+                "Start": {
+                  "Days": null,
+                  "Coeff": -1
+                },
+                "End": {
+                  "Days": 1,
+                  "Coeff": -1
+                },
+                "UseIndexEnd": null
+              },
+              "IgnoreObservationPeriod": false,
+              "EndWindow": null,
+              "Criteria": {"ConditionOccurrence": {
+                "OccurrenceEndDate": null,
+                "CorrelatedCriteria": null,
+                "ConditionTypeExclude": false,
+                "CodesetId": 8,
+                "ProviderSpecialty": null,
+                "Gender": null,
+                "VisitType": null,
+                "First": null,
+                "OccurrenceStartDate": null,
+                "ConditionType": null,
+                "ConditionSourceConcept": null,
+                "StopReason": null,
+                "Age": null
+              }},
+              "Occurrence": {
+                "Type": 0,
+                "IsDistinct": false,
+                "Count": 0
+              }
+            },
+            {
+              "RestrictVisit": false,
+              "StartWindow": {
+                "UseEventEnd": false,
+                "Start": {
+                  "Days": null,
+                  "Coeff": -1
+                },
+                "End": {
+                  "Days": 1,
+                  "Coeff": -1
+                },
+                "UseIndexEnd": null
+              },
+              "IgnoreObservationPeriod": false,
+              "EndWindow": null,
+              "Criteria": {"ConditionOccurrence": {
+                "OccurrenceEndDate": null,
+                "CorrelatedCriteria": null,
+                "ConditionTypeExclude": false,
+                "CodesetId": 9,
+                "ProviderSpecialty": null,
+                "Gender": null,
+                "VisitType": null,
+                "First": null,
+                "OccurrenceStartDate": null,
+                "ConditionType": null,
+                "ConditionSourceConcept": null,
+                "StopReason": null,
+                "Age": null
+              }},
+              "Occurrence": {
+                "Type": 0,
+                "IsDistinct": false,
+                "Count": 0
+              }
+            },
+            {
+              "RestrictVisit": false,
+              "StartWindow": {
+                "UseEventEnd": false,
+                "Start": {
+                  "Days": null,
+                  "Coeff": -1
+                },
+                "End": {
+                  "Days": 1,
+                  "Coeff": -1
+                },
+                "UseIndexEnd": null
+              },
+              "IgnoreObservationPeriod": false,
+              "EndWindow": null,
+              "Criteria": {"ConditionOccurrence": {
+                "OccurrenceEndDate": null,
+                "CorrelatedCriteria": null,
+                "ConditionTypeExclude": false,
+                "CodesetId": 7,
+                "ProviderSpecialty": null,
+                "Gender": null,
+                "VisitType": null,
+                "First": null,
+                "OccurrenceStartDate": null,
+                "ConditionType": null,
+                "ConditionSourceConcept": null,
+                "StopReason": null,
+                "Age": null
+              }},
+              "Occurrence": {
+                "Type": 0,
+                "IsDistinct": false,
+                "Count": 0
+              }
+            }
+          ],
+          "Type": "ALL",
+          "DemographicCriteriaList": [],
+          "Groups": [],
+          "Count": null
+        },
+        "QualifiedLimit": {"Type": "All"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"ConditionOccurrence": {
+            "OccurrenceEndDate": null,
+            "CorrelatedCriteria": null,
+            "ConditionTypeExclude": false,
+            "CodesetId": 11,
+            "ProviderSpecialty": null,
+            "Gender": null,
+            "VisitType": null,
+            "First": true,
+            "OccurrenceStartDate": null,
+            "ConditionType": null,
+            "ConditionSourceConcept": null,
+            "StopReason": null,
+            "Age": null
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "All"},
+          "ObservationWindow": {
+            "PostDays": 30,
+            "PriorDays": 365
+          }
+        }
+      },
+      "createdDate": "2019-02-28T15:43:27.093+0000",
+      "createdBy": null,
+      "name": "[PatientLevelPrediction Cohort] T: Persons at start of first episode of Pharmaceutically-treated depression (PTD)",
+      "modifiedDate": "2019-02-28T15:45:36.687+0000",
+      "description": null,
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 8931
+    }
+  ],
+  "modelSettings": [{"LassoLogisticRegressionSettings": {
+    "seed": null,
+    "variance": 0.01
+  }}],
+  "name": "[Framework PLP] Methods Research PTD predictions",
+  "modifiedDate": "1589289970308",
+  "covariateSettings": [{
+    "VisitCountMediumTerm": false,
+    "ObservationShortTerm": true,
+    "shortTermStartDays": -30,
+    "MeasurementRangeGroupShortTerm": false,
+    "ConditionOccurrenceLongTerm": false,
+    "DrugEraStartLongTerm": false,
+    "VisitCountShortTerm": false,
+    "Chads2Vasc": false,
+    "ConditionGroupEraStartLongTerm": false,
+    "ConditionEraShortTerm": false,
+    "Dcsi": false,
+    "DrugGroupEraLongTerm": true,
+    "DrugGroupEraShortTerm": true,
+    "ConditionEraStartLongTerm": false,
+    "temporal": false,
+    "DemographicsIndexMonth": true,
+    "ConditionOccurrencePrimaryInpatientLongTerm": false,
+    "ConditionEraAnyTimePrior": false,
+    "addDescendantsToInclude": false,
+    "ConditionGroupEraStartMediumTerm": false,
+    "ProcedureOccurrenceLongTerm": true,
+    "DrugExposureLongTerm": false,
+    "DrugEraStartShortTerm": false,
+    "DistinctIngredientCountMediumTerm": false,
+    "DistinctMeasurementCountShortTerm": false,
+    "MeasurementRangeGroupLongTerm": true,
+    "ConditionGroupEraOverlapping": false,
+    "attr_fun": "getDbDefaultCovariateData",
+    "MeasurementRangeGroupMediumTerm": false,
+    "DrugGroupEraStartMediumTerm": false,
+    "MeasurementAnyTimePrior": false,
+    "MeasurementMediumTerm": false,
+    "includedCovariateIds": [],
+    "ConditionOccurrenceAnyTimePrior": false,
+    "DistinctConditionCountLongTerm": false,
+    "MeasurementValueLongTerm": false,
+    "DrugEraShortTerm": false,
+    "DrugGroupEraAnyTimePrior": false,
+    "DrugEraOverlapping": false,
+    "ConditionOccurrencePrimaryInpatientAnyTimePrior": false,
+    "ConditionEraMediumTerm": false,
+    "ConditionEraOverlapping": false,
+    "ConditionEraStartShortTerm": false,
+    "ObservationAnyTimePrior": false,
+    "VisitConceptCountShortTerm": true,
+    "DemographicsEthnicity": true,
+    "DistinctIngredientCountLongTerm": false,
+    "ConditionOccurrencePrimaryInpatientShortTerm": false,
+    "DemographicsAgeGroup": true,
+    "DistinctProcedureCountShortTerm": false,
+    "DistinctObservationCountMediumTerm": false,
+    "includedCovariateConceptIds": [],
+    "DrugGroupEraStartShortTerm": false,
+    "addDescendantsToExclude": false,
+    "DrugEraLongTerm": false,
+    "DistinctConditionCountShortTerm": false,
+    "ConditionGroupEraShortTerm": true,
+    "ConditionEraStartMediumTerm": false,
+    "VisitCountLongTerm": false,
+    "DemographicsRace": true,
+    "ProcedureOccurrenceAnyTimePrior": false,
+    "DistinctObservationCountLongTerm": false,
+    "attr_class": "covariateSettings",
+    "ProcedureOccurrenceMediumTerm": false,
+    "CharlsonIndex": false,
+    "DemographicsPriorObservationTime": false,
+    "MeasurementShortTerm": true,
+    "DistinctProcedureCountMediumTerm": false,
+    "ConditionEraLongTerm": false,
+    "DrugGroupEraStartLongTerm": false,
+    "DemographicsGender": true,
+    "DeviceExposureAnyTimePrior": false,
+    "ObservationLongTerm": true,
+    "DemographicsIndexYearMonth": false,
+    "ConditionOccurrenceMediumTerm": false,
+    "longTermStartDays": -365,
+    "DemographicsAge": false,
+    "DrugGroupEraOverlapping": false,
+    "DistinctMeasurementCountLongTerm": false,
+    "MeasurementRangeGroupAnyTimePrior": false,
+    "DistinctConditionCountMediumTerm": false,
+    "DrugGroupEraMediumTerm": false,
+    "ProcedureOccurrenceShortTerm": true,
+    "ObservationMediumTerm": false,
+    "ConditionGroupEraAnyTimePrior": false,
+    "Chads2": false,
+    "DrugExposureAnyTimePrior": false,
+    "DeviceExposureLongTerm": true,
+    "DemographicsTimeInCohort": false,
+    "DistinctMeasurementCountMediumTerm": false,
+    "MeasurementValueShortTerm": false,
+    "DeviceExposureMediumTerm": false,
+    "ConditionGroupEraStartShortTerm": false,
+    "ConditionOccurrencePrimaryInpatientMediumTerm": false,
+    "MeasurementLongTerm": true,
+    "DemographicsIndexYear": false,
+    "MeasurementValueMediumTerm": false,
+    "DrugEraStartMediumTerm": false,
+    "MeasurementValueAnyTimePrior": false,
+    "DistinctObservationCountShortTerm": false,
+    "DrugEraMediumTerm": false,
+    "ConditionGroupEraLongTerm": true,
+    "DrugExposureShortTerm": false,
+    "DistinctIngredientCountShortTerm": false,
+    "DeviceExposureShortTerm": true,
+    "mediumTermStartDays": -180,
+    "DemographicsPostObservationTime": false,
+    "VisitConceptCountLongTerm": true,
+    "VisitConceptCountMediumTerm": false,
+    "excludedCovariateConceptIds": [],
+    "ConditionGroupEraMediumTerm": false,
+    "DrugExposureMediumTerm": false,
+    "DistinctProcedureCountLongTerm": false,
+    "DrugEraAnyTimePrior": false,
+    "endDays": 0,
+    "ConditionOccurrenceShortTerm": false
+  }],
+  "modifiedBy": null,
+  "conceptSets": [],
+  "id": 168,
+  "packageName": "ptdresearch"
+}

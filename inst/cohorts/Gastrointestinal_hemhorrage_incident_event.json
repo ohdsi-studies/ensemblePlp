@@ -1,0 +1,277 @@
+{
+  "ExpressionLimit": {"Type": "First"},
+  "CollapseSettings": {
+    "CollapseType": "ERA",
+    "EraPad": 0
+  },
+  "ConceptSets": [{
+    "expression": {"items": [
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 4280942,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "66636001",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Acute gastrojejunal ulcer with perforation",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": true
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 28779,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "17709002",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Bleeding esophageal varices",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": true
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 198798,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "109558001",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Dieulafoy's vascular malformation",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": true
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 4112183,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "195475003",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Esophageal varices with bleeding, associated with another disorder",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": true
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 194382,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "23913003",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "External hemorrhoids",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 192671,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "74474003",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Gastrointestinal hemorrhage",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": true
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 196436,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "90458007",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Internal hemorrhoids",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 4338225,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "88169003",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Peptic ulcer with perforation",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": true
+      },
+      {
+        "isExcluded": true,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 194158,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "48729005",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Perinatal gastrointestinal hemorrhage",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": true
+      }
+    ]},
+    "name": "Gastrointestinal hemorrhage",
+    "id": 0
+  }],
+  "cdmVersionRange": ">=5.0.0",
+  "QualifiedLimit": {"Type": "First"},
+  "InclusionRules": [],
+  "PrimaryCriteria": {
+    "CriteriaList": [{"ConditionOccurrence": {
+      "OccurrenceEndDate": null,
+      "CorrelatedCriteria": null,
+      "ConditionTypeExclude": false,
+      "CodesetId": 0,
+      "ProviderSpecialty": null,
+      "Gender": null,
+      "VisitType": [
+        {
+          "INVALID_REASON_CAPTION": "Unknown",
+          "CONCEPT_ID": 9203,
+          "STANDARD_CONCEPT": null,
+          "CONCEPT_CODE": "ER",
+          "VOCABULARY_ID": "Visit",
+          "CONCEPT_NAME": "Emergency Room Visit",
+          "DOMAIN_ID": "Visit",
+          "STANDARD_CONCEPT_CAPTION": "Unknown",
+          "CONCEPT_CLASS_ID": null,
+          "INVALID_REASON": null
+        },
+        {
+          "INVALID_REASON_CAPTION": "Unknown",
+          "CONCEPT_ID": 9201,
+          "STANDARD_CONCEPT": null,
+          "CONCEPT_CODE": "IP",
+          "VOCABULARY_ID": "Visit",
+          "CONCEPT_NAME": "Inpatient Visit",
+          "DOMAIN_ID": "Visit",
+          "STANDARD_CONCEPT_CAPTION": "Unknown",
+          "CONCEPT_CLASS_ID": null,
+          "INVALID_REASON": null
+        }
+      ],
+      "First": true,
+      "OccurrenceStartDate": null,
+      "ConditionType": [
+        {
+          "INVALID_REASON_CAPTION": "Unknown",
+          "CONCEPT_ID": 38000183,
+          "STANDARD_CONCEPT": null,
+          "CONCEPT_CODE": "OMOP generated",
+          "VOCABULARY_ID": "Condition Type",
+          "CONCEPT_NAME": "Inpatient detail - primary",
+          "DOMAIN_ID": "Condition Type",
+          "STANDARD_CONCEPT_CAPTION": "Unknown",
+          "CONCEPT_CLASS_ID": null,
+          "INVALID_REASON": null
+        },
+        {
+          "INVALID_REASON_CAPTION": "Unknown",
+          "CONCEPT_ID": 38000199,
+          "STANDARD_CONCEPT": null,
+          "CONCEPT_CODE": "OMOP generated",
+          "VOCABULARY_ID": "Condition Type",
+          "CONCEPT_NAME": "Inpatient header - primary",
+          "DOMAIN_ID": "Condition Type",
+          "STANDARD_CONCEPT_CAPTION": "Unknown",
+          "CONCEPT_CLASS_ID": null,
+          "INVALID_REASON": null
+        },
+        {
+          "INVALID_REASON_CAPTION": "Unknown",
+          "CONCEPT_ID": 44786627,
+          "STANDARD_CONCEPT": null,
+          "CONCEPT_CODE": "OMOP generated",
+          "VOCABULARY_ID": "Condition Type",
+          "CONCEPT_NAME": "Primary Condition",
+          "DOMAIN_ID": "Condition Type",
+          "STANDARD_CONCEPT_CAPTION": "Unknown",
+          "CONCEPT_CLASS_ID": null,
+          "INVALID_REASON": null
+        },
+        {
+          "INVALID_REASON_CAPTION": "Unknown",
+          "CONCEPT_ID": 38000184,
+          "STANDARD_CONCEPT": null,
+          "CONCEPT_CODE": "OMOP generated",
+          "VOCABULARY_ID": "Condition Type",
+          "CONCEPT_NAME": "Inpatient detail - 1st position",
+          "DOMAIN_ID": "Condition Type",
+          "STANDARD_CONCEPT_CAPTION": "Unknown",
+          "CONCEPT_CLASS_ID": null,
+          "INVALID_REASON": null
+        },
+        {
+          "INVALID_REASON_CAPTION": "Unknown",
+          "CONCEPT_ID": 38000200,
+          "STANDARD_CONCEPT": null,
+          "CONCEPT_CODE": "OMOP generated",
+          "VOCABULARY_ID": "Condition Type",
+          "CONCEPT_NAME": "Inpatient header - 1st position",
+          "DOMAIN_ID": "Condition Type",
+          "STANDARD_CONCEPT_CAPTION": "Unknown",
+          "CONCEPT_CLASS_ID": null,
+          "INVALID_REASON": null
+        }
+      ],
+      "ConditionSourceConcept": null,
+      "StopReason": null,
+      "Age": null
+    }}],
+    "PrimaryCriteriaLimit": {"Type": "First"},
+    "ObservationWindow": {
+      "PostDays": 0,
+      "PriorDays": 0
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "ExpressionLimit": {"Type": "First"},
+  "CollapseSettings": {
+    "CollapseType": "ERA",
+    "EraPad": 0
+  },
+  "ConceptSets": [{
+    "expression": {"items": [
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 374060,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "288723005",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Acute ill-defined cerebrovascular disease",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": true
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 4108356,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "195190007",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Cerebral infarction due to embolism of cerebral arteries",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": true
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 4110192,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "195189003",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Cerebral infarction due to thrombosis of cerebral arteries",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": true
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 4043731,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "230692004",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Infarction - precerebral",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": true
+      }
+    ]},
+    "name": "Ischemic stroke",
+    "id": 0
+  }],
+  "cdmVersionRange": ">=5.0.0",
+  "QualifiedLimit": {"Type": "First"},
+  "InclusionRules": [],
+  "PrimaryCriteria": {
+    "CriteriaList": [{"ConditionOccurrence": {
+      "OccurrenceEndDate": null,
+      "CorrelatedCriteria": null,
+      "ConditionTypeExclude": false,
+      "CodesetId": 0,
+      "ProviderSpecialty": null,
+      "Gender": null,
+      "VisitType": [{
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_ID": 9201,
+        "STANDARD_CONCEPT": null,
+        "CONCEPT_CODE": "IP",
+        "VOCABULARY_ID": "Visit",
+        "CONCEPT_NAME": "Inpatient Visit",
+        "DOMAIN_ID": "Visit",
+        "STANDARD_CONCEPT_CAPTION": "Unknown",
+        "CONCEPT_CLASS_ID": null,
+        "INVALID_REASON": null
+      }],
+      "First": true,
+      "OccurrenceStartDate": null,
+      "ConditionType": null,
+      "ConditionSourceConcept": null,
+      "StopReason": null,
+      "Age": null
+    }}],
+    "PrimaryCriteriaLimit": {"Type": "First"},
+    "ObservationWindow": {
+      "PostDays": 0,
+      "PriorDays": 0
+    }
+  }
+}

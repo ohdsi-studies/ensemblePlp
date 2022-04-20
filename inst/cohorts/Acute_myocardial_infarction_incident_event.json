@@ -1,0 +1,158 @@
+{
+  "ExpressionLimit": {"Type": "First"},
+  "CollapseSettings": {
+    "CollapseType": "ERA",
+    "EraPad": 0
+  },
+  "ConceptSets": [{
+    "expression": {"items": [
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 4329847,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "22298006",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Myocardial infarction",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": true
+      },
+      {
+        "isExcluded": true,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 314666,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "1755008",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Old myocardial infarction",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": true
+      }
+    ]},
+    "name": "Acute MI",
+    "id": 0
+  }],
+  "cdmVersionRange": ">=5.0.0",
+  "QualifiedLimit": {"Type": "First"},
+  "InclusionRules": [],
+  "PrimaryCriteria": {
+    "CriteriaList": [{"ConditionOccurrence": {
+      "OccurrenceEndDate": null,
+      "CorrelatedCriteria": null,
+      "ConditionTypeExclude": false,
+      "CodesetId": 0,
+      "ProviderSpecialty": null,
+      "Gender": null,
+      "VisitType": [
+        {
+          "INVALID_REASON_CAPTION": "Unknown",
+          "CONCEPT_ID": 9203,
+          "STANDARD_CONCEPT": null,
+          "CONCEPT_CODE": "ER",
+          "VOCABULARY_ID": "Visit",
+          "CONCEPT_NAME": "Emergency Room Visit",
+          "DOMAIN_ID": "Visit",
+          "STANDARD_CONCEPT_CAPTION": "Unknown",
+          "CONCEPT_CLASS_ID": null,
+          "INVALID_REASON": null
+        },
+        {
+          "INVALID_REASON_CAPTION": "Unknown",
+          "CONCEPT_ID": 9201,
+          "STANDARD_CONCEPT": null,
+          "CONCEPT_CODE": "IP",
+          "VOCABULARY_ID": "Visit",
+          "CONCEPT_NAME": "Inpatient Visit",
+          "DOMAIN_ID": "Visit",
+          "STANDARD_CONCEPT_CAPTION": "Unknown",
+          "CONCEPT_CLASS_ID": null,
+          "INVALID_REASON": null
+        }
+      ],
+      "First": true,
+      "OccurrenceStartDate": null,
+      "ConditionType": [
+        {
+          "INVALID_REASON_CAPTION": "Unknown",
+          "CONCEPT_ID": 38000183,
+          "STANDARD_CONCEPT": null,
+          "CONCEPT_CODE": "OMOP generated",
+          "VOCABULARY_ID": "Condition Type",
+          "CONCEPT_NAME": "Inpatient detail - primary",
+          "DOMAIN_ID": "Condition Type",
+          "STANDARD_CONCEPT_CAPTION": "Unknown",
+          "CONCEPT_CLASS_ID": null,
+          "INVALID_REASON": null
+        },
+        {
+          "INVALID_REASON_CAPTION": "Unknown",
+          "CONCEPT_ID": 38000199,
+          "STANDARD_CONCEPT": null,
+          "CONCEPT_CODE": "OMOP generated",
+          "VOCABULARY_ID": "Condition Type",
+          "CONCEPT_NAME": "Inpatient header - primary",
+          "DOMAIN_ID": "Condition Type",
+          "STANDARD_CONCEPT_CAPTION": "Unknown",
+          "CONCEPT_CLASS_ID": null,
+          "INVALID_REASON": null
+        },
+        {
+          "INVALID_REASON_CAPTION": "Unknown",
+          "CONCEPT_ID": 44786627,
+          "STANDARD_CONCEPT": null,
+          "CONCEPT_CODE": "OMOP generated",
+          "VOCABULARY_ID": "Condition Type",
+          "CONCEPT_NAME": "Primary Condition",
+          "DOMAIN_ID": "Condition Type",
+          "STANDARD_CONCEPT_CAPTION": "Unknown",
+          "CONCEPT_CLASS_ID": null,
+          "INVALID_REASON": null
+        },
+        {
+          "INVALID_REASON_CAPTION": "Unknown",
+          "CONCEPT_ID": 38000184,
+          "STANDARD_CONCEPT": null,
+          "CONCEPT_CODE": "OMOP generated",
+          "VOCABULARY_ID": "Condition Type",
+          "CONCEPT_NAME": "Inpatient detail - 1st position",
+          "DOMAIN_ID": "Condition Type",
+          "STANDARD_CONCEPT_CAPTION": "Unknown",
+          "CONCEPT_CLASS_ID": null,
+          "INVALID_REASON": null
+        },
+        {
+          "INVALID_REASON_CAPTION": "Unknown",
+          "CONCEPT_ID": 38000200,
+          "STANDARD_CONCEPT": null,
+          "CONCEPT_CODE": "OMOP generated",
+          "VOCABULARY_ID": "Condition Type",
+          "CONCEPT_NAME": "Inpatient header - 1st position",
+          "DOMAIN_ID": "Condition Type",
+          "STANDARD_CONCEPT_CAPTION": "Unknown",
+          "CONCEPT_CLASS_ID": null,
+          "INVALID_REASON": null
+        }
+      ],
+      "ConditionSourceConcept": null,
+      "StopReason": null,
+      "Age": null
+    }}],
+    "PrimaryCriteriaLimit": {"Type": "First"},
+    "ObservationWindow": {
+      "PostDays": 0,
+      "PriorDays": 0
+    }
+  }
+}
